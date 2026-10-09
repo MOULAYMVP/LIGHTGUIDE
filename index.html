@@ -44,7 +44,7 @@
   .videos{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
   .video{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
   .video .frame{position:relative;padding-top:56.25%}
-  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
   .video p{margin:0;padding:12px 14px;font-size:14px;font-weight:600}
   .channel{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);
     border-radius:12px;padding:20px;text-decoration:none;color:inherit}
@@ -55,6 +55,10 @@
   .btn{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;font-weight:700;
     padding:14px 28px;border-radius:11px;margin-top:8px}
   .btn:hover{background:var(--primary-dark)}
+  .notice{max-width:620px;margin:22px auto 6px;background:rgba(139,26,26,.06);border:1px solid rgba(139,26,26,.25);
+    border-radius:12px;padding:14px 18px;text-align:center}
+  .notice strong{color:var(--primary);font-size:16px}
+  .notice p{margin:6px 0 0;color:#374151;font-size:14.5px}
   footer{padding:30px 0;text-align:center;color:var(--muted);font-size:13.5px}
   footer a{color:var(--primary)}
   [data-lang]{display:none}
@@ -82,18 +86,33 @@
       <h1>LightBurn installation and usage guide</h1>
       <p class="lede">Everything you need to get LightBurn installed, connected to your machine, and cutting your first job.</p>
       <p class="chip">🖥 For Windows 10 &amp; 11</p>
+      <div class="notice"><strong>Your order is ready – Download and installation instructions</strong><p>If LightBurn is already installed, please uninstall it and reinstall the software using our reseller links.</p><p>Please follow the provided installation instructions carefully. A full installation video is also included to guide you through the process.</p><p>If you have any questions or need assistance, please do not hesitate to contact us.</p></div>
+      <p><a class="btn" href="https://www.mediafire.com/folder/wuqzik7mhed9l/lightburn+setup" target="_blank" rel="noopener noreferrer">⬇ Download LightBurn</a></p>
+      <p class="sub" style="margin:10px 0 0">File password: <strong>123</strong></p>
     </div>
     <div data-lang="de">
       <p class="eyebrow">Anleitung</p>
       <h1>LightBurn: Installation und Bedienung</h1>
       <p class="lede">Alles, was Sie brauchen, um LightBurn zu installieren, mit Ihrer Maschine zu verbinden und den ersten Auftrag zu schneiden.</p>
       <p class="chip">🖥 Für Windows 10 &amp; 11</p>
+      <div class="notice"><strong>Ihre Bestellung ist bereit – Download und Installationsanleitung</strong><p>Falls LightBurn bereits installiert ist, deinstallieren Sie es bitte und installieren Sie die Software über unsere Reseller-Links neu.</p><p>Bitte befolgen Sie die bereitgestellte Installationsanleitung sorgfältig. Ein vollständiges Installationsvideo ist ebenfalls enthalten und führt Sie durch den Vorgang.</p><p>Wenn Sie Fragen haben oder Unterstützung benötigen, zögern Sie bitte nicht, uns zu kontaktieren.</p></div>
+      <p><a class="btn" href="https://www.mediafire.com/folder/wuqzik7mhed9l/lightburn+setup" target="_blank" rel="noopener noreferrer">⬇ LightBurn herunterladen</a></p>
+      <p class="sub" style="margin:10px 0 0">Datei-Passwort: <strong>123</strong></p>
     </div>
     <div data-lang="fr">
       <p class="eyebrow">Guide</p>
       <h1>Guide d’installation et d’utilisation de LightBurn</h1>
       <p class="lede">Tout ce qu’il faut pour installer LightBurn, le connecter à votre machine et lancer votre première découpe.</p>
       <p class="chip">🖥 Pour Windows 10 et 11</p>
+      <div class="notice"><strong>Votre commande est prête – Téléchargement et instructions d’installation</strong><p>Si LightBurn est déjà installé, veuillez le désinstaller puis réinstaller le logiciel via nos liens revendeur.</p><p>Veuillez suivre attentivement les instructions d’installation fournies. Une vidéo d’installation complète est également incluse pour vous guider pas à pas.</p><p>Si vous avez des questions ou besoin d’aide, n’hésitez pas à nous contacter.</p></div>
+      <p><a class="btn" href="https://www.mediafire.com/folder/wuqzik7mhed9l/lightburn+setup" target="_blank" rel="noopener noreferrer">⬇ Télécharger LightBurn</a></p>
+      <p class="sub" style="margin:10px 0 0">Mot de passe du fichier : <strong>123</strong></p>
+    </div>
+    <div class="video" style="max-width:620px;margin:26px auto 0;text-align:left">
+      <div class="frame"><video controls preload="metadata" playsinline src="videos/lightburn-installation.mp4"></video></div>
+      <p data-lang="en" class="on">Full LightBurn installation walkthrough</p>
+      <p data-lang="de">Vollständige LightBurn-Installationsanleitung</p>
+      <p data-lang="fr">Installation complète de LightBurn pas à pas</p>
     </div>
   </div>
 </div>
@@ -105,7 +124,7 @@
       <p class="sub">Work through these in order. The whole process usually takes under ten minutes.</p>
       <ol class="steps">
         <li><span class="num">1</span><div><h3>Check your system</h3><p>LightBurn runs on Windows 10 and Windows 11. Make sure you have administrator rights on the computer you are installing on.</p></div></li>
-        <li><span class="num">2</span><div><h3>Download the installer</h3><p>Use the download link from your order email. Save the file somewhere you can find it, such as your Downloads folder.</p></div></li>
+        <li><span class="num">2</span><div><h3>Download the installer</h3><p>Click the <a href="https://www.mediafire.com/folder/wuqzik7mhed9l/lightburn+setup" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600">Download LightBurn</a> button above to get the setup file. The file password is <strong>123</strong>. Save the file somewhere you can find it, such as your Downloads folder.</p></div></li>
         <li><span class="num">3</span><div><h3>Run the installer</h3><p>Open the downloaded file and follow the prompts. Windows may ask you to confirm the installation; accept to continue.</p></div></li>
         <li><span class="num">4</span><div><h3>Enter your licence key</h3><p>Start LightBurn and enter the licence key from your order email when prompted. Keep that email — you will need the key again if you reinstall.</p></div></li>
         <li><span class="num">5</span><div><h3>Add your laser</h3><p>Open Devices and add your controller: Ruida, GRBL, Smoothieboard, TopWisdom or EZCad2. Set your bed size and origin to match your machine.</p></div></li>
@@ -118,7 +137,7 @@
       <p class="sub">Gehen Sie die Schritte der Reihe nach durch. Das Ganze dauert meist weniger als zehn Minuten.</p>
       <ol class="steps">
         <li><span class="num">1</span><div><h3>System prüfen</h3><p>LightBurn läuft unter Windows 10 und Windows 11. Stellen Sie sicher, dass Sie auf dem Computer Administratorrechte haben.</p></div></li>
-        <li><span class="num">2</span><div><h3>Installationsdatei herunterladen</h3><p>Verwenden Sie den Download-Link aus Ihrer Bestell-E-Mail. Speichern Sie die Datei an einem Ort, den Sie wiederfinden, etwa im Ordner Downloads.</p></div></li>
+        <li><span class="num">2</span><div><h3>Installationsdatei herunterladen</h3><p>Klicken Sie oben auf <a href="https://www.mediafire.com/folder/wuqzik7mhed9l/lightburn+setup" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600">LightBurn herunterladen</a>, um die Installationsdatei zu laden. Das Datei-Passwort lautet <strong>123</strong>. Speichern Sie die Datei an einem Ort, den Sie wiederfinden, etwa im Ordner Downloads.</p></div></li>
         <li><span class="num">3</span><div><h3>Installation starten</h3><p>Öffnen Sie die heruntergeladene Datei und folgen Sie den Anweisungen. Windows fragt eventuell nach einer Bestätigung; bestätigen Sie, um fortzufahren.</p></div></li>
         <li><span class="num">4</span><div><h3>Lizenzschlüssel eingeben</h3><p>Starten Sie LightBurn und geben Sie den Lizenzschlüssel aus Ihrer Bestell-E-Mail ein. Bewahren Sie die E-Mail auf — bei einer Neuinstallation brauchen Sie den Schlüssel erneut.</p></div></li>
         <li><span class="num">5</span><div><h3>Laser hinzufügen</h3><p>Öffnen Sie Geräte und fügen Sie Ihren Controller hinzu: Ruida, GRBL, Smoothieboard, TopWisdom oder EZCad2. Stellen Sie Arbeitsfläche und Nullpunkt passend zu Ihrer Maschine ein.</p></div></li>
@@ -131,7 +150,7 @@
       <p class="sub">Suivez ces étapes dans l’ordre. L’ensemble prend généralement moins de dix minutes.</p>
       <ol class="steps">
         <li><span class="num">1</span><div><h3>Vérifier votre système</h3><p>LightBurn fonctionne sous Windows 10 et Windows 11. Assurez-vous de disposer des droits administrateur sur l’ordinateur concerné.</p></div></li>
-        <li><span class="num">2</span><div><h3>Télécharger le programme d’installation</h3><p>Utilisez le lien de téléchargement figurant dans l’e-mail de votre commande. Enregistrez le fichier dans un dossier que vous retrouverez facilement.</p></div></li>
+        <li><span class="num">2</span><div><h3>Télécharger le programme d’installation</h3><p>Cliquez sur le bouton <a href="https://www.mediafire.com/folder/wuqzik7mhed9l/lightburn+setup" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600">Télécharger LightBurn</a> ci-dessus pour obtenir le fichier d’installation. Le mot de passe du fichier est <strong>123</strong>. Enregistrez le fichier dans un dossier que vous retrouverez facilement.</p></div></li>
         <li><span class="num">3</span><div><h3>Lancer l’installation</h3><p>Ouvrez le fichier téléchargé et suivez les instructions. Windows peut demander une confirmation ; acceptez pour continuer.</p></div></li>
         <li><span class="num">4</span><div><h3>Saisir votre clé de licence</h3><p>Démarrez LightBurn et saisissez la clé de licence reçue dans l’e-mail de commande. Conservez cet e-mail : la clé vous resservira en cas de réinstallation.</p></div></li>
         <li><span class="num">5</span><div><h3>Ajouter votre laser</h3><p>Ouvrez Périphériques et ajoutez votre contrôleur : Ruida, GRBL, Smoothieboard, TopWisdom ou EZCad2. Réglez la taille du plateau et l’origine selon votre machine.</p></div></li>
